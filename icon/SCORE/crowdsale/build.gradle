@@ -41,8 +41,8 @@ deployJar {
     keystore = rootProject.hasProperty('keystoreName') ? "$keystoreName" : ''
     password = rootProject.hasProperty('keystorePass') ? "$keystorePass" : ''
     parameters {
-        arg('_fundingGoalInIcx', '10000000000000000000')
-        arg('_tokenScore', 'cxde992ec5adbba852ba527ccf04b1041bfbb0e13e')
+        arg('_fundingGoalInIcx', '10')
+        arg('_tokenScore', 'cxd2e2cfe28562ed17bf3446f9368a5cdccba1ea76')
         arg('_durationInBlocks', '3600')
         arg('_tokenPrice', '10')
     }
@@ -50,8 +50,8 @@ deployJar {
 
 test {
     useJUnitPlatform()
-    // testLogging.showStandardStreams = true
-    // testLogging.exceptionFormat = "full"
+    testLogging.showStandardStreams = true
+    testLogging.exceptionFormat = "full"
 }
 
 def irc2TokenBuildDirectory = project(':irc2').buildDir
